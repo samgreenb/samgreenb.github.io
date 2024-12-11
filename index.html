@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E0PGJWDY9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7E0PGJWDY9');
+  </script>
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gonzalo Herrera Seller</title>
@@ -26,9 +39,6 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#aboutme">ABOUT ME</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#projects">PROJECTS</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle" href="#projects" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -38,16 +48,24 @@
               <li>
                 <h6 class="dropdown-header">Main projects</h6>
               </li>
-              <li><a class="dropdown-item" href="#">Boids</a></li>
-              <li><a class="dropdown-item" href="#">Hereafter</a></li>
+              <li><a class="dropdown-item" href="#boids">Simulating flocking behavior in a real time</a></li>
+              <li><a class="dropdown-item" href="#hereafter">Hereafter</a></li>
+              <li><a class="dropdown-item" href="#rendering">Rendering Engine</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
               <li>
                 <h6 class="dropdown-header">Other projects</h6>
               </li>
-              <li><a class="dropdown-item" href="#">TWOMD</a></li>
-              <li><a class="dropdown-item" href="#">MEOW</a></li>
+              <li><a class="dropdown-item" href="#aagp">Action Adventure Gameplay prototype</a></li>
+              <li><a class="dropdown-item" href="#gameroom">The Game Room</a></li>
+              <li><a class="dropdown-item" href="#tinyjam">TinyJam</a></li>
+              <li><a class="dropdown-item" href="#twomd">Two weeks on mech duty</a></li>
+              <li><a class="dropdown-item" href="#pongout">Pong-Out</a></li>
+              <li><a class="dropdown-item" href="#okt">Old Kaiju's Tape</a></li>
+              <li><a class="dropdown-item" href="#bullethell">Bullet Hell</a></li>
+              <li><a class="dropdown-item" href="#meow">MEOW</a></li>
+              <li><a class="dropdown-item" href="#concer">Concer</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -68,14 +86,15 @@
     <div class="container p-4 ">
       <p class="display-3 d-flex justify-content-center mb-3"><strong>ABOUT ME</strong></p>
 
-      <img src="terezi.png" class="rounded mx-auto d-block img-thumbnail mb-3" alt="terezi from homestuck">
+      <p class="fs-5 mt-5">Hello! I am Gonzalo Herrera Seller, Graduate in Software Engineering, MSc in Computer Games
+        Technology by Abertay University, and long time hobbyist game developer. Of course, I am
+        also a passionate gamer, I love fighting games, rythym games, JRPGS and board games. I focus on the programming
+        and
+        engineering side of game development. In both my undergrad and master programs I
+        focused my final dissertation in games, and in my Masters got an award for best performing student overall.
+        Below you can find some tools and programming languages I am familiar with, as well as the projects I have
+        worked on.</p>
 
-      <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
 
       <p class="display-6 d-flex justify-content-center mt-3 mb-5"><strong>Skills and tools</strong></p>
       <div class="container text-center">
@@ -140,49 +159,303 @@
   <section id="projects" style="background:rgb(245, 245, 245)">
     <div class="container p-4">
       <p class="display-3 d-flex justify-content-center mb-3"><strong>PROJECTS</strong></p>
-      <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
 
-      <div class="container border ">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col d-flex align-items-center justify-content-center  ">
-              <img src="terezi.png" class="rounded mx-auto d-block img-thumbnail " alt="terezi from homestuck">
+      <div class="card mb-3" style="" id="boids">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="media/img/projectscreenshots/boids.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Simulating flocking behavior in a real time performance budget</h5>
+              <p class="card-text">In this project I developed a real time solution for boids simulation running in the
+                GPU capable of simulating 15,000 simultaneous agents in real time on a consumer grade GPU, a laptop RTX
+                3060, and over 50,000 in a high end machine with a RTX 4090.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">• Made in Unreal with C++, HLSL and blueprints.</li>
+                <li class="list-group-item">• 3 months of development time.</li>
+                <li class="list-group-item">• Made in 2024.</li>
+              </ul>
+
+
             </div>
-            <div class="col d-flex align-items-center justify-content-center  ">
-              Text about the project
+
+          </div>
+          <div class="card-footer"><a href="https://github.com/samgreenb/BoidsMT/tree/develop"
+              class="btn btn-primary">Github Repository</a>
+
+            <a href="https://youtu.be/dS6DWp45v2c" class="btn btn-primary">Video Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="" id="hereafter">
+        <div class="row g-0">
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Hereafter</h5>
+              <p class="card-text">Hereafter is a single player puzzle-platforming dog simulator. I worked as Lead
+                Programmer and managed the workflow for team members that needed to use version control and work
+                directly with the engine.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">• Made in Unity with C#.</li>
+                <li class="list-group-item">• 3 months of development time.</li>
+                <li class="list-group-item">• Made in 2024.</li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <img src="media/img/projectscreenshots/ha.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="card-footer"><a href="https://teamlimbo.itch.io/hereafter" class="btn btn-primary">Itch.io</a>
+
+            <a href="https://youtu.be/L2T86j2Tito?si=ZpiG9On9J5oaJWms" class="btn btn-primary">Video Demo</a>
+            <a href="https://github.com/samgreenb/DES/tree/develop" class="btn btn-primary">Github Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="" id="rendering">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="media/img/projectscreenshots/dx11.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Toy Rendering Engine using DirectX11</h5>
+              <p class="card-text">To get a working understanding of graphics rendering I worked on building a simple
+                rendering application where I could test both the C++ side of graphics rendering, writing the engine
+                itself, and the shader side using HLSL. I also used RenderDoc to understand better the rendering process
+                and debug the application during development.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">• Built using the DirectXTK toolkit.</li>
+                <li class="list-group-item">• Wrote the engine code, resource management and loading in C++.</li>
+                <li class="list-group-item">• Wrote pixel and vertex shaders for the rendering including implementations
+                  of shadow mapping, normal mapping and gaussian spot highlights.</li>
+              </ul>
+
+
+            </div>
+
+          </div>
+          <div class="card-footer"><a
+              href="https://drive.google.com/file/d/1SOmIypsOm2mYtrvFB6ujNP5WnCw8K3Sp/view?usp=sharing"
+              class="btn btn-primary">Video Demo</a></div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card h-100" id="aagp">
+            <img src="media/img/projectscreenshots/aagp.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Action Adventure Gameply Prototype</h5>
+              <p class="card-text">I am currently working on this gameplay prototype, focused on satisfactory movement
+                and simultaneous gun and sword combat against numerous enemies.</p>
+
+            </div>
+            <div class="card-footer"><a
+                href="https://drive.google.com/file/d/1wlKbbJZm-VpOJZZMQtWjdvatQwNOH39R/view?usp=sharing"
+                class="btn btn-primary">Video Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="gameroom">
+            <img src="media/img/projectscreenshots/tgr.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Game Room</h5>
+              <p class="card-text">For my final year dissertation in my undergraduate software engineering program, I
+                developed a serious game with the objective of aiding in the socialization of the elderly, inspired by
+                the Wii game console.</p>
+
+            </div>
+            <div class="card-footer"><a
+                href="https://drive.google.com/file/d/1GHy3CD_DGD7lzA3C_WnvR2u3KNaMEemJ/view?usp=sharing"
+                class="btn btn-primary">Video Demo</a></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="tinyjam">
+            <img src="media/img/projectscreenshots/tj.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">TinyJam</h5>
+              <p class="card-text">I am a fan of rhythm games, and Guitar Hero is my favorite, so I made this small
+                rendition of it.</p>
+
+            </div>
+            <div class="card-footer"><a
+                href="https://drive.google.com/file/d/12gWFoSvikfkBtJZ76hHzhfbnsRke5yie/view?usp=sharing"
+                class="btn btn-primary ">Video Demo</a></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="twomd">
+            <img src="media/img/projectscreenshots/twom.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Two weeks on mech duty</h5>
+              <p class="card-text">Made in a couple of days for a Godot game jam, but never got to the point of
+                finishing it. In this game, the player spends their days collecting space junk and using it to assemble
+                robots and get a payout for each completed robot based on its quality.</p>
+
+            </div>
+            <div class="card-footer"><a
+                href="https://drive.google.com/file/d/1dMqMOgpa1ueFdCEGXbyoyba4FTjV_ZyL/view?usp=sharing"
+                class="btn btn-primary">Video Demo</a></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="pongout">
+            <img src="media/img/projectscreenshots/po.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pong-Out</h5>
+              <p class="card-text">Worked on this game for a 9-hour game jam with two friends. The game is a
+                reinterpretation of both classics pong and breakout, combining them.</p>
+
+            </div>
+            <div class="card-footer"><a href="https://sam-hersel.itch.io/pong-out" class="btn btn-primary">Itch.io</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="okt">
+            <img src="media/img/projectscreenshots/okt.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Old Kaijus's Tape</h5>
+              <p class="card-text">A game inspired by the concept of old kaiju movies recorded on VHS tapes. In it, the
+                player controls a small robot that can connect to bigger robots with different capabilities to get to
+                the end of the level. Made for a GMTK jam.</p>
+
+            </div>
+            <div class="card-footer"><a href="https://rlebron22.itch.io/okt" class="btn btn-primary">Itch.io</a>
+              <a href="https://drive.google.com/file/d/1ChNVEaeoI4AsNmHtNMjfANSbohgExr54/view?usp=sharing"
+                class="btn btn-primary">Video Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="bullethell">
+            <img src="media/img/projectscreenshots/bh.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bullet Hell</h5>
+              <p class="card-text">A classical bullet hell twin stick shooter with several waves and a final boss at the
+                end.</p>
+
+            </div>
+            <div class="card-footer"><a
+                href="https://drive.google.com/file/d/1mpPsr3FZxXubMRhCVRZ__-BPoaS2aozc/view?usp=sharing"
+                class="btn btn-primary">Video Demo</a></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="meow">
+            <img src="media/img/projectscreenshots/meow.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MEOW - Interactive text adventure</h5>
+              <p class="card-text">My first game, made around 8 years ago, was inspired by the text adventure Zork and
+                the web comic Homestuck. In it the player controls a household cat as it lives a normal day in its life.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" id="concer">
+            <img src="media/img/projectscreenshots/c.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Concer</h5>
+              <p class="card-text">Made for a university jam in two days. I did around half of the programming, taking
+                care of room transitions and enemy spawn and behavior. </p>
+
+            </div>
+            <div class="card-footer"> <a href="https://sam-hersel.itch.io/concer" class="btn btn-primary">Itch.io</a>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <section id="work">
     <div class="container p-4">
       <p class="display-3 d-flex justify-content-center mb-3"><strong>WORK EXPERIENCE</strong></p>
-      <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
+      <div class="card mb-3" style="" id="boids">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <img src="media/img/logos/mc.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Backend Programmer at Metadata S.L. for 1.5 years</h5>
+              <p class="card-text">Before finishing my undergraduate program I started working at Metadata as a Backend
+                programmer, where I stayed until I left to study a Masters Degree. As a backend programmer, I developed
+                java microservices using Quarkus for the frontend team to use in the development of the company
+                products. Other technologies used daily were Docker, MySQL, Hibernate and RabbitMQ. Shortly after
+                joining the company I was given a project whose backend I developed almost entirely and
+                deployed for the company to use, as it was a internal development.</p>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="education" style="background:rgb(245, 245, 245)">
     <div class="container p-4">
       <p class="display-3 d-flex justify-content-center mb-3"><strong>EDUCATION HISTORY</strong></p>
-      <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
+
+      <div class="card mb-3" style="" id="boids">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <img src="media/img/logos/abe.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">MSc Computer Games Technology at Abertay University</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">September 2023 - August 2024</h6>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Grade: 4.0/4.5 GPA</h6>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Graduated with disctinction and earned the Andrew the
+                Vries Award.</h6>
+              <p class="card-text"></p>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card mb-3" style="" id="boids">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <img src="media/img/logos/uma.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Degree in Software Engineering at Universidad de Malaga</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">September 2017 - October 2022</h6>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Grade: 7.3/10</h6>
+              <p class="card-text"></p>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
   </section>
@@ -193,7 +466,6 @@
 
       <img class="invisible"
         src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsamgreenb.github.iotest&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=test&edge_flat=false" />
-
 
 
 
